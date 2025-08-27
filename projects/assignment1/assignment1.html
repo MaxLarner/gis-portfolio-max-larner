@@ -6,8 +6,10 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
+<meta name="dcterms.date" content="2025-05-22">
+<meta name="description" content="Algorithm working with Geospatial objects to find the shortest world border">
 
-<title>About – gis-portfolio-max-larner</title>
+<title>World’s Shortest Border Algorithm – gis-portfolio-max-larner</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -23,22 +25,22 @@ ul.task-list li input[type="checkbox"] {
 </style>
 
 
-<script src="site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="site_libs/quarto-nav/headroom.min.js"></script>
-<script src="site_libs/clipboard/clipboard.min.js"></script>
-<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="site_libs/quarto-search/fuse.min.js"></script>
-<script src="site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="./">
-<script src="site_libs/quarto-html/quarto.js"></script>
-<script src="site_libs/quarto-html/popper.min.js"></script>
-<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="site_libs/quarto-html/anchor.min.js"></script>
-<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-2f5df379a58b258e96c21c0638c20c03.css" rel="stylesheet" id="quarto-text-highlighting-styles">
-<script src="site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-6bd9cfa162949bde0a231f530c97869d.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../">
+<script src="../../site_libs/quarto-html/quarto.js"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-2f5df379a58b258e96c21c0638c20c03.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap-6bd9cfa162949bde0a231f530c97869d.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -68,7 +70,7 @@ ul.task-list li input[type="checkbox"] {
 }</script>
 
 
-<link rel="stylesheet" href="styles.css">
+<link rel="stylesheet" href="../../styles.css">
 </head>
 
 <body class="nav-fixed">
@@ -78,7 +80,7 @@ ul.task-list li input[type="checkbox"] {
     <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
-    <a class="navbar-brand" href="./index.html">
+    <a class="navbar-brand" href="../../index.html">
     <span class="navbar-title">gis-portfolio-max-larner</span>
     </a>
   </div>
@@ -89,23 +91,23 @@ ul.task-list li input[type="checkbox"] {
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
-    <a class="nav-link" href="./index.html"> 
+    <a class="nav-link" href="../../index.html"> 
 <span class="menu-text">Home</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./projects/dissertation/dissertation.html"> 
+    <a class="nav-link" href="../../projects/dissertation/dissertation.html"> 
 <span class="menu-text">Dissertation</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./projects/assignment1/assignment1.html"> 
+    <a class="nav-link active" href="../../projects/assignment1/assignment1.html" aria-current="page"> 
 <span class="menu-text">Project 1</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./projects/assignment2/assignment2.html"> 
+    <a class="nav-link" href="../../projects/assignment2/assignment2.html"> 
 <span class="menu-text">Project 2</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link active" href="./about.html" aria-current="page"> 
+    <a class="nav-link" href="../../about.html"> 
 <span class="menu-text">About Me</span></a>
   </li>  
 </ul>
@@ -119,22 +121,50 @@ ul.task-list li input[type="checkbox"] {
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
-        
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#using-python-geopandas-and-spatial-indexing-for-efficient-border-analysis" id="toc-using-python-geopandas-and-spatial-indexing-for-efficient-border-analysis" class="nav-link active" data-scroll-target="#using-python-geopandas-and-spatial-indexing-for-efficient-border-analysis">Using Python, GeoPandas and Spatial Indexing for Efficient Border Analysis</a></li>
+  <li><a href="#project-overview" id="toc-project-overview" class="nav-link" data-scroll-target="#project-overview">Project Overview</a></li>
+  <li><a href="#the-challenge" id="toc-the-challenge" class="nav-link" data-scroll-target="#the-challenge">The Challenge</a></li>
+  <li><a href="#my-approach" id="toc-my-approach" class="nav-link" data-scroll-target="#my-approach">My Approach</a></li>
+  <li><a href="#key-techniques-and-decisions" id="toc-key-techniques-and-decisions" class="nav-link" data-scroll-target="#key-techniques-and-decisions">Key Techniques and Decisions</a></li>
+  <li><a href="#output-map" id="toc-output-map" class="nav-link" data-scroll-target="#output-map">Output Map</a></li>
+  <li><a href="#reflections" id="toc-reflections" class="nav-link" data-scroll-target="#reflections">Reflections</a></li>
+  <li><a href="#resources" id="toc-resources" class="nav-link" data-scroll-target="#resources">Resources</a></li>
+  <li><a href="#skills-demonstrated" id="toc-skills-demonstrated" class="nav-link" data-scroll-target="#skills-demonstrated">Skills Demonstrated</a></li>
+  </ul>
+</nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">About</h1>
-</div>
+<h1 class="title">World’s Shortest Border Algorithm</h1>
+  <div class="quarto-categories">
+    <div class="quarto-category">python</div>
+  </div>
+  </div>
 
+<div>
+  <div class="description">
+    Algorithm working with Geospatial objects to find the shortest world border
+  </div>
+</div>
 
 
 <div class="quarto-title-meta">
 
     
+    <div>
+    <div class="quarto-title-meta-heading">Published</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date">May 22, 2025</p>
+    </div>
+  </div>
   
     
   </div>
@@ -144,9 +174,113 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<p>About this site</p>
+<section id="using-python-geopandas-and-spatial-indexing-for-efficient-border-analysis" class="level3">
+<h3 class="anchored" data-anchor-id="using-python-geopandas-and-spatial-indexing-for-efficient-border-analysis">Using Python, GeoPandas and Spatial Indexing for Efficient Border Analysis</h3>
+<hr>
+</section>
+<section id="project-overview" class="level2">
+<h2 class="anchored" data-anchor-id="project-overview">Project Overview</h2>
+<p>This project aimed to identify the shortest international border in the world using Python and GeoPandas, with a strong emphasis on algorithm efficiency and spatial reasoning. The task involved writing a custom script to:</p>
+<ul>
+<li>Detect shared borders between countries</li>
+<li>Measure their geodesic length</li>
+<li>Produce a high-quality map of the shortest result</li>
+</ul>
+<p>This project achieved an 83 in a third year GIS module.</p>
+<hr>
+</section>
+<section id="the-challenge" class="level2">
+<h2 class="anchored" data-anchor-id="the-challenge">The Challenge</h2>
+<p>Using a shapefile of country borders, write an efficient algorithm that detects and maps the shortest international border in the world.</p>
+<p>Key constraints included:</p>
+<ul>
+<li>Efficient comparison of all country pairs</li>
+<li>Accurate distance measurement (in metres)</li>
+<li>Clear cartographic output</li>
+</ul>
+<hr>
+</section>
+<section id="my-approach" class="level2">
+<h2 class="anchored" data-anchor-id="my-approach">My Approach</h2>
+<ul>
+<li>Load world country geometries using GeoPandas<br>
+</li>
+<li>Build an R-tree to spatially index all countries by bounding box<br>
+</li>
+<li>For each country (A), retrieve spatially close neighbours (B)<br>
+</li>
+<li>Skip self- and reverse comparisons<br>
+</li>
+<li>Check for a true shared border using <code>.intersection()</code><br>
+</li>
+<li>If a shared border exists:
+<ul>
+<li>Measure its geodesic length using PyProj’s Geod<br>
+</li>
+<li>Track the shortest one found<br>
+</li>
+</ul></li>
+<li>Render a UTM-projected map of the result using Matplotlib</li>
+</ul>
+<p>Each function (such as <code>find_shortest_border</code>, <code>check_border</code>, and <code>calculate_length</code>) was modular, documented, and designed to handle edge cases, including enclaves and missing geometries.</p>
+<hr>
+</section>
+<section id="key-techniques-and-decisions" class="level2">
+<h2 class="anchored" data-anchor-id="key-techniques-and-decisions">Key Techniques and Decisions</h2>
+<p><strong>R-tree Spatial Indexing</strong><br>
+Used to reduce the number of geometry comparisons by limiting checks to spatially proximate countries. This greatly increased performance by reducing unnecessary calculations.</p>
+<p><strong>Geodesic Measurement</strong><br>
+Applied WGS84 geodesic calculations using PyProj’s <code>Geod</code> class for realistic, curvature-aware border length measurement without needing frequent reprojections.</p>
+<p><strong>CRS Handling</strong><br>
+Distance calculations were performed in WGS84, while the final map was reprojected to a dynamic UTM zone estimated from the border location to ensure spatial accuracy in rendering.</p>
+<p><strong>Map Design</strong><br>
+The map included the two countries, their shared border, a legend, north arrow, and scalebar. A buffer limited surrounding features, focusing attention on the result.</p>
+<hr>
+</section>
+<section id="output-map" class="level2">
+<h2 class="anchored" data-anchor-id="output-map">Output Map</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/shortest_border.png" class="img-fluid figure-img"></p>
+<figcaption>Shortest border map</figcaption>
+</figure>
+</div>
+<p><em>Map of the shortest international border (Italy–Vatican City), reprojected using UTM for accurate local visualisation.</em></p>
+<hr>
+</section>
+<section id="reflections" class="level2">
+<h2 class="anchored" data-anchor-id="reflections">Reflections</h2>
+<p>The use of R-tree indexing was critical to improving efficiency, reducing the number of geometry comparisons required.<br>
+Geodesic calculations offered globally accurate results without introducing heavy computational overhead.<br>
+Handling of geometry types and careful use of projections ensured both analytical robustness and visual clarity.<br>
+While the dataset’s resolution limited exact precision, the algorithm produced replicable and spatially defensible results.</p>
+<hr>
+</section>
+<section id="resources" class="level2">
+<h2 class="anchored" data-anchor-id="resources">Resources</h2>
+<ul>
+<li><a href="assignment1-writeup.pdf">Full write-up (PDF)</a><br>
+</li>
+<li><a href="https://github.com/MaxLarner/gis-portfolio-max-larner/blob/main/assignment1/assignment1.py" target="_blank">Python source code on GitHub</a></li>
+</ul>
+<hr>
+</section>
+<section id="skills-demonstrated" class="level2">
+<h2 class="anchored" data-anchor-id="skills-demonstrated">Skills Demonstrated</h2>
+<ul>
+<li>Python algorithm design<br>
+</li>
+<li>Spatial indexing and performance tuning<br>
+</li>
+<li>Geodesic geometry analysis<br>
+</li>
+<li>Cartographic visualisation<br>
+</li>
+<li>Robust and modular programming in a GIS context</li>
+</ul>
 
 
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">

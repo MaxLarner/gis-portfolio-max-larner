@@ -1,19 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://MaxLarner.github.io/gis-portfolio-max-larner/assignment2/assignment2.html</loc>
-    <lastmod>2025-03-30T15:42:29.743Z</lastmod>
+    <loc>https://MaxLarner.github.io/gis-portfolio-max-larner/about.html</loc>
+    <lastmod>2025-03-27T16:28:10.864Z</lastmod>
+  </url>
+  <url>
+    <loc>https://MaxLarner.github.io/gis-portfolio-max-larner/projects/dissertation/dissertation.html</loc>
+    <lastmod>2025-08-27T16:58:12.932Z</lastmod>
+  </url>
+  <url>
+    <loc>https://MaxLarner.github.io/gis-portfolio-max-larner/projects/assignment1/assignment1.html</loc>
+    <lastmod>2025-08-27T15:58:57.180Z</lastmod>
+  </url>
+  <url>
+    <loc>https://MaxLarner.github.io/gis-portfolio-max-larner/projects/assignment2/assignment2.html</loc>
+    <lastmod>2025-08-27T15:52:07.396Z</lastmod>
   </url>
   <url>
     <loc>https://MaxLarner.github.io/gis-portfolio-max-larner/index.html</loc>
-    <lastmod>2025-03-30T14:17:19.356Z</lastmod>
-  </url>
-  <url>
-    <loc>https://MaxLarner.github.io/gis-portfolio-max-larner/assignment1/assignment1.html</loc>
-    <lastmod>2025-03-30T15:42:44.606Z</lastmod>
-  </url>
-  <url>
-    <loc>https://MaxLarner.github.io/gis-portfolio-max-larner/about.html</loc>
-    <lastmod>2025-03-27T16:28:10.864Z</lastmod>
+    <lastmod>2025-08-27T18:44:02.857Z</lastmod>
   </url>
 </urlset>
