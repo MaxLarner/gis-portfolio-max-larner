@@ -214,13 +214,27 @@
     "href": "index.html",
     "title": "Max Larner – Portfolio of Work",
     "section": "",
-    "text": "This portfolio showcases geospatial data science projects completed during my final year at the University of Manchester. Each project was developed using Python, GeoPandas, and open-source tools to solve real-world spatial problems through custom algorithms and visual outputs.\nMy goal was to build efficient, replicable workflows that reflect both geospatial thinking and technical writing. This site is designed to demonstrate those skills to future employers.\n\n\n\nAn overview of my dissertation on selecting new conservation reserves under a future recolonisation of pine martens in Cumbria\n\n\n\nIdentify the shortest shared land border between any two countries using spatial indexing and geodesic geometry. This project highlights algorithm design, working with GeoPandas objects, and code structure.\n\n\n\nAn implementation of Jonny Huck’s (2014) Spatial Redistribution Algorithm, using a weighting layer to redistribute spatially ambigious point data.\n\n\n\n\nI’m a final-year geography student with strong interests in spatial data science, conservation biology, and sustainable development. My academic work focuses on Python-based GIS, GIS informed conservation management, and applying technical skills to real-world environmental challenges.\nYou can view my code on GitHub or contact me via LinkedIn and max.larner123@gmail.com."
+    "text": "This portfolio showcases geospatial data science projects completed during my final year at the University of Manchester. Each project was developed using Python, GeoPandas, and open-source tools to solve real-world spatial problems through custom algorithms and visual outputs.\nMy goal was to build efficient, replicable workflows that reflect both geospatial thinking and technical writing. This site is designed to demonstrate those skills to future employers."
+  },
+  {
+    "objectID": "index.html#welcome",
+    "href": "index.html#welcome",
+    "title": "Max Larner – Portfolio of Work",
+    "section": "",
+    "text": "This portfolio showcases geospatial data science projects completed during my final year at the University of Manchester. Each project was developed using Python, GeoPandas, and open-source tools to solve real-world spatial problems through custom algorithms and visual outputs.\nMy goal was to build efficient, replicable workflows that reflect both geospatial thinking and technical writing. This site is designed to demonstrate those skills to future employers."
+  },
+  {
+    "objectID": "index.html#projects",
+    "href": "index.html#projects",
+    "title": "Max Larner – Portfolio of Work",
+    "section": "Projects",
+    "text": "Projects\n\nDissertation Project - Spatial optimisation for conservation reserve selection\nAn overview of my dissertation on selecting new conservation reserves under a future recolonisation of pine martens in Cumbria\n\n\nWorld’s Shortest Border Algorithm\nIdentify the shortest shared land border between any two countries using spatial indexing and geodesic geometry. This project highlights algorithm design, working with GeoPandas objects, and code structure.\n\n\nJonny Huck’s Spatial Redistribution\nAn implementation of Jonny Huck’s (2014) Spatial Redistribution Algorithm, using a weighting layer to redistribute spatially ambigious point data."
   },
   {
     "objectID": "index.html#about-me",
     "href": "index.html#about-me",
     "title": "Max Larner – Portfolio of Work",
-    "section": "",
-    "text": "I’m a final-year geography student with strong interests in spatial data science, conservation biology, and sustainable development. My academic work focuses on Python-based GIS, GIS informed conservation management, and applying technical skills to real-world environmental challenges.\nYou can view my code on GitHub or contact me via LinkedIn and max.larner123@gmail.com."
+    "section": "About Me",
+    "text": "About Me\nI’m a final-year geography student with strong interests in spatial data science, conservation biology, and sustainable development. My academic work focuses on Python-based GIS, GIS informed conservation management, and applying technical skills to real-world environmental challenges.\nYou can view my code on GitHub or contact me via LinkedIn and max.larner123@gmail.com."
   }
 ]
