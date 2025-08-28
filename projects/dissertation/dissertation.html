@@ -162,6 +162,9 @@ ul.task-list li input[type="checkbox"] {
 <h2 class="anchored" data-anchor-id="project-overview">Project Overview</h2>
 <p>Invasive grey squirrels have displaced native red squirrels from much of the United Kingdom, and culling programmes are increasingly controversial and underfunded. This dissertation develops a <strong>spatial prioritisation framework</strong> to guide red squirrel conservation as the <strong>native pine marten</strong>, a predator that selectively predates the niave grey squirrel, recolonises Cumbria after being nearly functionally extinct since the 1700s. The approach combines geospatial analysis of landscape ecology with practical conservation constraints to identify reserves, or <strong>Strongholds</strong>, that maximise red squirrel persistence under three scenarios of future grey squirrel suppression by the pine marten (low, moderate and high).</p>
 <p>Working with open-source data and libraries, I built a Python-based algorithm that models how pine martens reduce grey squirrel densities and then ranks candidate strongholds using a <strong>multi‑criteria decision analysis (MCDA)</strong>. Criteria include the remaining grey squirrel density post predator recovery representing the cost of grey squirrel management within and 3km around a reserve, the total core habitat area available for red squirrels as a function of core to edge ratio, and the feasibility of management, which incorporates estimates of landowner willingness derived from past participation in woodland grant schemes and ongoing incentives. By exploring trade‑offs between ecological benefits and management constraints, the study provides an evidence-based roadmap for NGOs to allocate limited resources to most effectively take advantage of re-introduction schemes to achieve maximal conservation gains.</p>
+<ul>
+<li><a href="FINAL_SUBMISSION.pdf">Full dissertation (PDF)</a></li>
+</ul>
 <hr>
 </section>
 <section id="motivation-and-relevance" class="level2">
@@ -187,7 +190,9 @@ ul.task-list li input[type="checkbox"] {
 <li><p><strong>Suppression modelling:</strong> Baseline grey squirrel densities were reduced using three pine marten suppression coefficients derived from field studies. The residual density surface becomes the grey cost criterion in the MCDA.</p></li>
 <li><p><strong>Habitat and feasibility mapping:</strong> High-resolution land cover and woodland data were reclassified to identify suitable red squirrel habitat patches. To represent management feasibility, I compiled proxies for landowner engagement, including past uptake of woodland creation grants, Countryside Stewardship schemes and Forestry England ownership. Each 100&nbsp;m grid cell receives a feasibility score from 1&nbsp;(Low) to 4&nbsp;(High). This layer ensures that strongholds are not only ecologically suitable but also realistic to manage.</p></li>
 <li><p><strong>Cluster-based MCDA:</strong> A custom greedy algorithm grows clusters of habitat patches from seed sites, scoring each cluster on grey cost, core area and feasibility. By evaluating thousands of candidate strongholds across suppression scenarios, the algorithm reveals the optimal balance between ecological benefits and practical constraints. Unlike ‘black box’ optimisers, the scoring is transparent and allows managers to explore how weighting different criteria would change priorities.</p></li>
-<li><p><strong>Correlation analysis:</strong> The influence of each criterion on final scores changes with the level of suppression. At moderate suppression the grey cost carries most weight; at high suppression core area dominates; feasibility remains consistently important but secondary. Understanding these shifts helps NGOs decide when to prioritise habitat expansion versus controlling invasive populations.</p></li>
+<li><p><strong>Correlation analysis:</strong> The influence of each criterion on final scores changes with the level of suppression. At moderate suppression the grey cost carries most weight; at high suppression core area dominates; feasibility remains consistently important but secondary. Understanding these shifts helps NGOs decide when to prioritise habitat expansion versus controlling invasive populations.</p>
+<p><img src="images/code.png" class="img-fluid"></p></li>
+<li><p><strong>Figure 1:</strong> <em>Workflow diagram showing suppression modelling, clustering and MCDA scoring.</em></p></li>
 </ul>
 <hr>
 </section>
@@ -197,7 +202,9 @@ ul.task-list li input[type="checkbox"] {
 <li><p><strong>Dynamic stronghold selection:</strong> The model consistently identifies <strong>Whinlatter Forest</strong> as the top stronghold under all scenarios. An expanded <strong>Greystoke</strong> site ranks second under low suppression, while <strong>Elterwater</strong> emerges as a robust candidate across scenarios. These findings suggest that some Lake District strongholds (e.g.&nbsp;Thirlmere and Whinfell) may offer poor return on investment compared with alternative sites.</p></li>
 <li><p><strong>Shift from conifers to mixed woodlands:</strong> Significant pine marten suppression shifts priority strongholds away from conifer plantations towards broadleaf and mixed woodlands. This challenges current policy that favours conifers and highlights the importance of diverse habitats for red squirrel resilience.</p></li>
 <li><p><strong>Trade‑offs evolve with suppression:</strong> Correlation analysis shows that when grey squirrels are abundant, reducing grey cost is the primary driver of stronghold scores. As suppression increases and grey densities decline, the value of core habitat area rises, and feasibility becomes more influential. This underscores the need for adaptive management as predator populations recover.</p></li>
-<li><p><strong>Emerging opportunities for adaptive management:</strong> The model recommends staging investments, expanding stronghold boundaries progressively as pine marten densities grow. For example, Elterwater offers early benefits and can be expanded over time as suppression spreads. Such phased approaches allow NGOs to balance short‑term successes with long‑term resilience while working within funding and staffing constraints.</p></li>
+<li><p><strong>Emerging opportunities for adaptive management:</strong> The model recommends staging investments, expanding stronghold boundaries progressively as pine marten densities grow. For example, Elterwater offers early benefits and can be expanded over time as suppression spreads. Such phased approaches allow NGOs to balance short‑term successes with long‑term resilience while working within funding and staffing constraints.</p>
+<p><img src="images/algorithm_strongholds.png" class="img-fluid"></p></li>
+<li><p><strong>Figure 2:</strong> <em>Algorithmically Selected Strongholds</em></p></li>
 </ul>
 <hr>
 </section>
@@ -227,22 +234,20 @@ ul.task-list li input[type="checkbox"] {
 <h2 class="anchored" data-anchor-id="figures-and-visual-outputs">Figures and Visual Outputs</h2>
 <p>Placeholder images and interactive maps would be inserted here to illustrate the study area, workflow and top‑ranking strongholds. For example:</p>
 <ul>
-<li><p><strong>Figure 1:</strong> <em>Study area and Lake District Stronghold Complex.</em><br>
-<code>![](placeholder)</code></p></li>
-<li><p><strong>Figure 2:</strong> <em>Workflow diagram showing suppression modelling, clustering and MCDA scoring.</em><br>
-<code>![](placeholder)</code></p></li>
-<li><p><strong>Figure 3:</strong> <em>Comparison of top strongholds under low, moderate and high suppression scenarios.</em><br>
-<code>![](placeholder)</code></p></li>
+<li><p><strong>Figure 3:</strong> <em>Study area and Lake District Stronghold Complex.</em><br>
+<img src="placeholder.png" class="img-fluid"></p></li>
+<li><p><strong>Figure 4:</strong> <em>Comparison of grey squirrel density in existing strongholds under low, moderate and high pine marten suppression scenarios.</em><br>
+<img src="images/Xray.png" class="img-fluid"></p></li>
+<li><p><strong>Figure 5:</strong> <em>Stronghold Analysis, investigating how prioritised habitat composition, core area and grey squirrel density changes under suppression scenarios</em><br>
+<img src="images/graph.png" class="img-fluid"></p></li>
 </ul>
-<p>These visualisations help convey the results to partners and funders who may not be familiar with spatial analytics.</p>
 <hr>
 </section>
 <section id="resources" class="level2">
 <h2 class="anchored" data-anchor-id="resources">Resources</h2>
 <ul>
-<li><a href="placeholder">Full dissertation (PDF)</a></li>
+<li><a href="FINAL_SUBMISSION.pdf">Full dissertation (PDF)</a></li>
 <li><a href="placeholder">Anonymous GitHub repository with code and data</a></li>
-<li><a href="placeholder">Interactive map outputs and supplementary figures</a></li>
 </ul>
 <hr>
 </section>
