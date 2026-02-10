@@ -1,1 +1,408 @@
-/* css styles */
+/*
+ * Updated CSS for the projects list and general site styling
+ *
+ * This stylesheet retains the original palette and layout values while
+ * introducing refinements for the list card component. The cards now
+ * include focus states for keyboard users, subtler hover transitions,
+ * and underlined headings to improve link affordance. Colours and
+ * spacing remain aligned with the existing design system.
+ */
+
+/* Root variables define the core palette and scale. Adjust these values to tweak the overall look of the site. */
+:root {
+    --primary-color: #3367d6;
+    --secondary-color: #274fb8;
+    --bg-color: #ffffff;
+    --bg-soft: #f9f9fb;
+    --text-color: #1f2937;
+    --text-soft: #6b7280;
+    --border-color: #e5e7eb;
+    --radius-lg: 16px;
+    --radius-sm: 8px;
+    --shadow-sm: 0 2px 6px rgba(0, 0, 0, 0.04);
+    --shadow-lg: 0 10px 40px rgba(0, 0, 0, 0.06);
+    --hero-overlay: rgba(0, 0, 0, 0.45);
+    --font-family-base: Inter, "Helvetica Neue", Arial, sans-serif;
+  }
+  
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg-color: #0f1115;
+      --bg-soft: #181b25;
+      --text-color: #e4e8f0;
+      --text-soft: #a0a7b9;
+      --border-color: #282c37;
+      --shadow-sm: 0 2px 6px rgba(0, 0, 0, 0.5);
+      --shadow-lg: 0 10px 40px rgba(0, 0, 0, 0.6);
+    }
+  }
+  
+  /* Base typography and page styling */
+  body {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    font-family: var(--font-family-base);
+    line-height: 1.6;
+    margin: 0;
+  }
+  
+  /* === Global text link styling (excludes buttons & navbar) === */
+a:not(.btn):not(.nav-link):not(.navbar-brand):not([role="button"]) {
+  color: var(--primary-color);
+  text-decoration: none;
+  font-weight: 500;
+  position: relative;
+  display: inline-block;
+}
+
+/* Keep visited links consistent with theme */
+a:not(.btn):not(.nav-link):not(.navbar-brand):not([role="button"]):visited {
+  color: var(--primary-color);
+}
+
+/* Hover/active colour change */
+a:not(.btn):not(.nav-link):not(.navbar-brand):not([role="button"]):hover,
+a:not(.btn):not(.nav-link):not(.navbar-brand):not([role="button"]):active {
+  color: var(--secondary-color);
+  text-decoration: none;
+}
+
+/* Accessible focus ring */
+a:not(.btn):not(.nav-link):not(.navbar-brand):not([role="button"]):focus-visible {
+  outline: 2px solid var(--secondary-color);
+  outline-offset: 2px;
+}
+
+/* Underline affordance with a subtle slide-in effect */
+a:not(.btn):not(.nav-link):not(.navbar-brand):not([role="button"])::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -2px;
+  height: 2px;
+  background: currentColor;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.25s ease;
+}
+
+a:not(.btn):not(.nav-link):not(.navbar-brand):not([role="button"]):hover::after,
+a:not(.btn):not(.nav-link):not(.navbar-brand):not([role="button"]):focus-visible::after {
+  transform: scaleX(1);
+}
+
+/* --- Navbar link fixes (base colour + no underline effect) --- */
+.navbar .nav-link {
+  color: var(--text-color) !important;   /* visible at rest */
+  text-decoration: none;
+}
+
+.navbar .navbar-brand {
+  color: var(--text-color) !important;
+  text-decoration: none;
+}
+
+/* keep your existing hover style */
+.navbar-nav .nav-link.active,
+.navbar-nav .nav-link:focus,
+.navbar-nav .nav-link:hover {
+  background-color: var(--primary-color);
+  color: #fff !important;
+}
+
+/* make sure the animated underline never applies in navbar */
+.navbar .nav-link::after,
+.navbar .navbar-brand::after {
+  content: none !important;
+}
+
+/* Optional: toned-down links in the footer keep the same behaviour */
+footer a {
+  color: var(--primary-color);
+}
+footer a:hover,
+footer a:focus-visible {
+  color: var(--secondary-color);
+}
+  
+  /* Containers */
+  .container {
+    width: 100%;
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 1rem;
+  }
+  
+  /* Hero section */
+  .hero {
+    position: relative;
+    min-height: 75vh;
+    background: linear-gradient(var(--hero-overlay), var(--hero-overlay)), url('site_images/topographic_1.png') center/cover no-repeat;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 4rem 1rem;
+    color: #f5f5f5;
+  }
+  .hero h1 {
+    font-size: clamp(2rem, 4vw, 3rem);
+    margin-bottom: 1rem;
+    font-weight: 700;
+  }
+  .hero p {
+    max-width: 600px;
+    margin: 0 auto 1.5rem;
+    font-size: 1.125rem;
+    color: #e8eef7;
+  }
+  .hero .actions {
+    display: flex;
+    gap: 0.75rem;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  .hero .btn {
+    padding: 0.75rem 1.5rem;
+    border-radius: var(--radius-sm);
+    background-color: var(--primary-color);
+    color: #fff;
+    border: none;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+  }
+  .hero .btn:hover,
+  .hero .btn:focus {
+    background-color: var(--secondary-color);
+  }
+  
+  /* Project cards grid */
+  .projects-grid {
+    display: grid;
+    gap: 1.5rem;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    padding-top: 2rem;
+    padding-bottom: 1rem;
+  }
+  .project-card {
+    background-color: var(--bg-soft);
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-sm);
+    padding: 1.5rem;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+  }
+  .project-card:hover,
+  .project-card:focus-within {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-lg);
+  }
+  .project-card h3 {
+    margin-top: 0;
+    font-size: 1.25rem;
+    margin-bottom: 0.5rem;
+  }
+  .project-card p {
+    color: var(--text-soft);
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    font-size: 0.95rem;
+    margin-bottom: 1rem;
+  }
+  .project-card .btn {
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    border-radius: var(--radius-sm);
+    border: 1px solid var(--primary-color);
+    color: var(--primary-color);
+    background-color: transparent;
+    font-size: 0.875rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.2s ease, color 0.2s ease;
+  }
+  .project-card .btn:hover,
+  .project-card .btn:focus {
+    background-color: var(--primary-color);
+    color: #fff;
+  }
+  
+  /* Section spacing and headings */
+  .section {
+    padding: 3rem 0;
+  }
+  .section-title {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+    font-weight: 700;
+  }
+  
+  /* Footer */
+  footer {
+    border-top: 1px solid var(--border-color);
+    margin-top: 3rem;
+    padding: 2rem 0;
+    color: var(--text-soft);
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    font-size: 0.875rem;
+    text-align: center;
+  }
+  footer a {
+    color: var(--primary-color);
+  }
+  
+  /* Navbar */
+  .navbar {
+    backdrop-filter: saturate(180%) blur(8px);
+    border-bottom: 1px solid var(--border-color);
+    background-color: var(--bg-soft);
+  }
+  .navbar-brand {
+    font-weight: 700;
+  }
+  .navbar-nav .nav-link {
+    margin-right: 0.5rem;
+    padding: 0.5rem 0.75rem;
+    border-radius: var(--radius-sm);
+  }
+  .navbar-nav .nav-link.active,
+  .navbar-nav .nav-link:focus,
+  .navbar-nav .nav-link:hover {
+    background-color: var(--primary-color);
+    color: #fff !important;
+  }
+  
+  .navbar{
+    background-color: color-mix(in srgb, var(--bg-soft) 70%, transparent);
+    backdrop-filter: saturate(150%) blur(8px);
+  }
+  
+  /* Utility classes */
+  .text-soft {
+    color: var(--text-soft);
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+  }
+  h1.section,
+  h2.section,
+  h3.section,
+  h4.section {
+    padding: 0;
+    margin-top: 1rem;
+    margin-bottom: 1.5rem;
+  }
+  
+ /* === Vertical list cards (Projects page) === */
+.list-cards {
+    display: grid;
+    gap: 0.75rem;
+    margin: 1.5rem 0;
+  }
+  
+  /* CARD: use flex so image + text align */
+  .list-card {
+    display: flex;                 /* was: grid */
+    align-items: center;           /* vertical alignment */
+    gap: 0.75rem;
+    padding: 1rem;
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-lg);
+    background: var(--bg-soft);
+    box-shadow: var(--shadow-sm);
+    transition: transform 0.18s ease, box-shadow 0.18s ease, background 0.18s ease;
+  }
+  
+  .list-card:hover,
+  .list-card:focus-within {
+    transform: translateY(-3px);
+    box-shadow: var(--shadow-lg);
+    background: color-mix(in srgb, var(--bg-soft) 85%, white);
+  }
+  
+  /* THUMB: fixed width/height for consistent alignment */
+  .list-card .thumb {
+    flex: 0 0 150px;               /* square width */
+    height: 150px;                 /* square height */
+    overflow: hidden;
+    border-radius: calc(var(--radius-lg) - 6px);
+    border: 1px solid var(--border-color);
+    background: #ddd;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .list-card .thumb img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;             /* crops neatly inside the square */
+    display: block;
+  }
+  
+  /* CONTENT: allow text to shrink/truncate correctly */
+  .list-card .content {
+    flex: 1 1 auto;
+    min-width: 0;                  /* important for ellipsis/line-clamp */
+  }
+  
+  .list-card .content h3 {
+    margin: 0.25rem 0 0.5rem;
+    font-size: 1.25rem;
+    text-decoration: underline;
+  }
+  
+  .list-card .content p {
+    margin: 0 0 0.75rem;
+    color: var(--text-soft);
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+  }
+  
+  .list-card .meta {
+    font-size: 0.9rem;
+    color: var(--text-soft);
+    margin-bottom: 0.5rem;
+  }
+  
+  .list-card .actions .btn {
+    display: inline-block;
+    padding: 0.5rem 0.9rem;
+    border-radius: var(--radius-sm);
+    border: 1px solid var(--primary-color);
+    color: var(--primary-color);
+    background: transparent;
+    font-weight: 600;
+    transition: background 0.18s ease, color 0.18s ease;
+  }
+  
+  .list-card .actions .btn:hover,
+  .list-card .actions .btn:focus {
+    background: var(--primary-color);
+    color: #fff;
+    outline: 2px solid var(--primary-color);
+    outline-offset: 2px;
+  }
+  
+  /* MOBILE: stack image above text */
+  @media (max-width: 750px) {
+    .list-card {
+      flex-direction: column;      /* was: grid 1fr */
+      align-items: stretch;
+    }
+    .list-card .thumb {
+      width: 100%;
+      height: 180px;               /* consistent mobile thumb height */
+    }
+  }

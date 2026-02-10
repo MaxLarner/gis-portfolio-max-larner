@@ -1,25 +1,28 @@
 project:
   type: website
+  resources:
+    - site_images/**
+format:
+  html:
+    theme: quarto
+    light: cosmo
+    dark: darkly
+    css: styles.css
+    toc: true
 
 website:
-  title: "gis-portfolio-max-larner"
+  title: "Max Larner"
   navbar:
     left:
       - href: index.qmd
         text: Home
-      - href: assignment1/assignment1.qmd
-        text: "Project 1: Shortest Border"
-      - href: assignment2/assignment2.qmd
-        text: "Project 2: Weighted Redistribution"
+      - href: projects/dissertation/dissertation.qmd
+        text: "Dissertation"
+      - href: projects/project_list.qmd
+        text: Projects
       - href: about.qmd
         text: About Me
 
-format:
-  html:
-    theme:
-      - cosmo
-      - brand
-    css: styles.css
-    toc: true
+
 
 

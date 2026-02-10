@@ -1,28 +1,48 @@
 ---
-title: "Max Larner – GIS Portfolio"
-format: html
+title: _
+format:
+  html:
+    toc: false
+    page-layout: full
 ---
 
-# Welcome
+<div class="hero">
+  <h1>Geospatial projects & conservation analysis</h1>
+  <p>A portfolio of recent GIS projects and Dissertation</p>
+  <div class="actions">
+  [View Projects](/projects/project_list.qmd){.btn}
+  [About Me](/about.qmd){.btn}
+  </div>
+</div>
 
-This portfolio showcases two geospatial data science projects completed during my final year GIS module at the University of Manchester. Each project was developed using **Python**, **GeoPandas**, and open-source tools to solve real-world spatial problems through custom algorithms and visual outputs.
+## Featured Projects {.section}
 
-My goal was to build efficient, replicable workflows that reflect both geospatial thinking and technical writing. This site is designed to demonstrate those skills to future employers.
+<div class="container">
+<div class="projects-grid">
 
----
+::: {.project-card}
+### Dissertation Project – Spatial optimisation
+<p class="text-soft">Optimising reserve selection under pine marten recolonisation in Cumbria.</p>
+<a class="btn" href="projects/dissertation/dissertation.qmd">Open</a>
+:::
 
-## Projects
+::: {.project-card}
+### World’s Shortest Border Algorithm
+<p class="text-soft">Finding the shortest land border via spatial indexing & geodesic geometry.</p>
+<a class="btn" href="projects/assignment1/assignment1.qmd">Open</a>
+:::
 
-### [World's Shortest Border Algorithm](assignment1/assignment1.qmd)
-Identify the shortest shared land border between any two countries using spatial indexing and geodesic geometry. This project highlights algorithm design, working with GeoPandas objects, and code structure.
+::: {.project-card}
+### Spatial Redistribution Algorithm
+<p class="text-soft">Implementing Jonny Huck’s 2014 algorithm to redistribute ambiguous points.</p>
+<a class="btn" href="projects/assignment2/assignment2.qmd">Open</a>
+:::
 
-### [Jonny Huck's Spatial Redistribution](assignment2/assignment2.qmd)
-An implementation of Jonny Huck's (2014) Spatial Redistribution Algorithm, using a weighting layer to redistribute spatially ambigious point data.
+</div>
+</div>
 
----
+## About Me {.section}
 
-## About Me
+I’m a 1st‑class Geography BSc graduate from the University of Manchester, looking for opportunities in GIS‑informed consultation, or technical roles.  My interests span planning, landscape ecology/BNG, and sustainable development - opportunities aligned with these goals are always welcome.
 
-I'm a final-year geography student with strong interests in spatial data science, conservation biology, and sustainable development. My academic work focuses on Python-based GIS, GIS informed conservation management, and applying technical skills to real-world environmental challenges.
-
-You can view my code on [GitHub](https://github.com/MaxLarner/gis-portfolio-max-larner) or contact me via [LinkedIn](https://linkedin.com/in/max-larner-b53610208) and max.larner123@gmail.com.
+You can see all my code on [GitHub](https://github.com/MaxLarner/gis-portfolio-max-larner) or reach me via [LinkedIn](https://linkedin.com/in/max-larner-b53610208) or email at max.larner123@gmail.com.

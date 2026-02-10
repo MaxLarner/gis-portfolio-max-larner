@@ -1,0 +1,59 @@
+---
+title: "Projects"
+page-layout: full
+title-block: false
+---
+
+Here is a selection of my geospatial projects from university, written up as case studies. Each entry links to a full page with details, figures, and code.
+
+::: {.list-cards}
+
+::: {.list-card}
+<a class="thumb" href="dissertation/dissertation.qmd">
+![](dissertation/images/algorithm_strongholds.png){alt="Cumbria strongholds map thumbnail for Dissertation Project"}
+</a>
+<div class="content">
+
+### Dissertation Project – Spatial optimisation for conservation reserve selection
+<p>Optimising reserve selection under pine marten recolonisation in Cumbria. Combines species interaction modelling with spatial optimisation to propose viable red squirrel strongholds under predator recovery scenarios.</p>
+<div class="meta">Tools: Python, GeoPandas, ArcGIS Pro</div>
+<div class="actions">
+<a class="btn" href="dissertation/dissertation.qmd">Read more about the Dissertation Project</a>
+</div>
+
+</div>
+:::
+
+::: {.list-card}
+<a class="thumb" href="assignment1/assignment1.qmd">
+![](assignment1/images/shortest_border.png){alt="Border analysis visualisation thumbnail for World’s Shortest Border Algorithm"}
+</a>
+<div class="content">
+
+### World’s Shortest Border Algorithm
+<p>Identifies the shortest shared land border using spatial indexing and geodesic geometry. Highlights custom algorithm design and efficient spatial computation.</p>
+<div class="meta">Tools: Python, GeoPandas</div>
+<div class="actions">
+<a class="btn" href="assignment1/assignment1.qmd">Read more about the World’s Shortest Border Algorithm</a>
+</div>
+
+</div>
+:::
+
+::: {.list-card}
+<a class="thumb" href="assignment2/assignment2.qmd">
+![](assignment2/images/Redistribution.png){alt="Spatial redistribution diagram thumbnail for Spatial Redistribution Algorithm"}
+</a>
+<div class="content">
+
+### Spatial Redistribution Algorithm
+<p>Implements Jonny Huck’s (2014) Spatial Redistribution Algorithm using a weighting layer to redistribute spatially ambiguous point data and examine bias.</p>
+<div class="meta">Tools: Python, GIS, Weighting layers</div>
+<div class="actions">
+<a class="btn" href="assignment2/assignment2.qmd">Read more about the Spatial Redistribution Algorithm</a>
+</div>
+
+</div>
+:::
+
+:::

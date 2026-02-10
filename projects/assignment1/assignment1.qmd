@@ -1,0 +1,102 @@
+---
+title: "World's Shortest Border Algorithm"
+date: 2025-05-22
+categories: [python]
+image: images/shortest_border.jpg
+image-alt: "Results of shortest border excersise"
+description: "Algorithm working with Geospatial objects to find the shortest world border"
+format: html
+---
+
+### Using Python, GeoPandas and Spatial Indexing for Efficient Border Analysis
+
+---
+
+## Project Overview
+
+This project aimed to identify the shortest international border in the world using Python and GeoPandas, with a strong emphasis on algorithm efficiency and spatial reasoning. The task involved writing a custom script to:
+
+- Detect shared borders between countries
+- Measure their geodesic length
+- Produce a high-quality map of the shortest result
+
+This project achieved an 83 in a third year GIS module.
+
+---
+
+## The Challenge
+
+Using a shapefile of country borders, write an efficient algorithm that detects and maps the shortest international border in the world.
+
+Key constraints included:
+
+- Efficient comparison of all country pairs
+- Accurate distance measurement (in metres)
+- Clear cartographic output
+
+---
+
+## My Approach
+
+- Load world country geometries using GeoPandas  
+- Build an R-tree to spatially index all countries by bounding box  
+- For each country (A), retrieve spatially close neighbours (B)  
+- Skip self- and reverse comparisons  
+- Check for a true shared border using `.intersection()`  
+- If a shared border exists:  
+  - Measure its geodesic length using PyProj's Geod  
+  - Track the shortest one found  
+- Render a UTM-projected map of the result using Matplotlib  
+
+Each function (such as `find_shortest_border`, `check_border`, and `calculate_length`) was modular, documented, and designed to handle edge cases, including enclaves and missing geometries.
+
+---
+
+## Key Techniques and Decisions
+
+**R-tree Spatial Indexing**  
+Used to reduce the number of geometry comparisons by limiting checks to spatially proximate countries. This greatly increased performance by reducing unnecessary calculations.
+
+**Geodesic Measurement**  
+Applied WGS84 geodesic calculations using PyProj's `Geod` class for realistic, curvature-aware border length measurement without needing frequent reprojections.
+
+**CRS Handling**  
+Distance calculations were performed in WGS84, while the final map was reprojected to a dynamic UTM zone estimated from the border location to ensure spatial accuracy in rendering.
+
+**Map Design**  
+The map included the two countries, their shared border, a legend, north arrow, and scalebar. A buffer limited surrounding features, focusing attention on the result.
+
+---
+
+## Output Map
+
+![Shortest border map](images/shortest_border.png)
+
+*Map of the shortest international border (Italy–Vatican City), reprojected using UTM for accurate local visualisation.*
+
+---
+
+## Reflections
+
+The use of R-tree indexing was critical to improving efficiency, reducing the number of geometry comparisons required.  
+Geodesic calculations offered globally accurate results without introducing heavy computational overhead.  
+Handling of geometry types and careful use of projections ensured both analytical robustness and visual clarity.  
+While the dataset’s resolution limited exact precision, the algorithm produced replicable and spatially defensible results.
+
+---
+
+## Resources
+
+- [Full write-up (PDF)](assignment1-writeup.pdf)  
+- <a href="https://github.com/MaxLarner/gis-portfolio-max-larner/blob/main/assignment1/assignment1.py" target="_blank">Python source code on GitHub</a>
+
+---
+
+## Skills Demonstrated
+
+- Python algorithm design  
+- Spatial indexing and performance tuning  
+- Geodesic geometry analysis  
+- Cartographic visualisation  
+- Robust and modular programming in a GIS context
+
