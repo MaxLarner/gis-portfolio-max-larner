@@ -46,31 +46,60 @@
     margin: 0;
   }
   
-  a {
-    color: var(--primary-color);
-    text-decoration: none;
-    position: relative;
-    display: inline-block;
-    overflow: hidden;
-  }
-  a:hover {
-    text-decoration: none;
-  }
-  a::after {
-    content: '';
-    position: absolute;
-    bottom: -2px;
-    left: 0;
-    width: 100%;
-    height: 2px;
-    background-color: var(--primary-color);
-    transform: translateX(-100%);
-    transition: transform 0.3s ease;
-  }
-  a:hover::after,
-  a:focus::after {
-    transform: translateX(0);
-  }
+  /* === Global text link styling (excludes buttons & navbar) === */
+a:not(.btn):not(.nav-link):not(.navbar-brand):not([role="button"]) {
+  color: var(--primary-color);
+  text-decoration: none;
+  font-weight: 500;
+  position: relative;
+  display: inline-block;
+}
+
+/* Keep visited links consistent with theme */
+a:not(.btn):not(.nav-link):not(.navbar-brand):not([role="button"]):visited {
+  color: var(--primary-color);
+}
+
+/* Hover/active colour change */
+a:not(.btn):not(.nav-link):not(.navbar-brand):not([role="button"]):hover,
+a:not(.btn):not(.nav-link):not(.navbar-brand):not([role="button"]):active {
+  color: var(--secondary-color);
+  text-decoration: none;
+}
+
+/* Accessible focus ring */
+a:not(.btn):not(.nav-link):not(.navbar-brand):not([role="button"]):focus-visible {
+  outline: 2px solid var(--secondary-color);
+  outline-offset: 2px;
+}
+
+/* Underline affordance with a subtle slide-in effect */
+a:not(.btn):not(.nav-link):not(.navbar-brand):not([role="button"])::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -2px;
+  height: 2px;
+  background: currentColor;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.25s ease;
+}
+
+a:not(.btn):not(.nav-link):not(.navbar-brand):not([role="button"]):hover::after,
+a:not(.btn):not(.nav-link):not(.navbar-brand):not([role="button"]):focus-visible::after {
+  transform: scaleX(1);
+}
+
+/* Optional: toned-down links in the footer keep the same behaviour */
+footer a {
+  color: var(--primary-color);
+}
+footer a:hover,
+footer a:focus-visible {
+  color: var(--secondary-color);
+}
   
   /* Containers */
   .container {
