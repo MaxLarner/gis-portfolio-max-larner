@@ -112,7 +112,7 @@ Placeholder images and interactive maps would be inserted here to illustrate the
 ## Resources
 
 - [Full dissertation (PDF)](FINAL_SUBMISSION.pdf)
-- [Anonymous GitHub repository with code and data](placeholder)
+- [Anonymous GitHub repository with code and data](https://github.com/MaxLarner/spatial_prioritisation)
 
 ---
 

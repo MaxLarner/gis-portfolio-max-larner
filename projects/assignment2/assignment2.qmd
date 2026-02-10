@@ -72,7 +72,7 @@ The 12-panel figure was created dynamically to visualise how the algorithm respo
 ## Resources:
 
 - [Full write-up (PDF)](assignment2-writeup.pdf)  
-- [view the Python source code](https://github.com/MaxLarner/gis-portfolio-max-larner/blob/main/assignment2/assignment2.py){target=_blank} directly.
+- [view the Python source code](https://github.com/MaxLarner/gis-portfolio-max-larner/blob/main/projects/assignment2/assignment2.py){target=_blank} directly.
 
 To generate maps:
 
