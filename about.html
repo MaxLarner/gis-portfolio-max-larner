@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>About – Max Larner</title>
+<title>About Me – Max Larner</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -93,10 +93,6 @@ ul.task-list li input[type="checkbox"] {
 <span class="menu-text">Home</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./projects/dissertation/dissertation.html"> 
-<span class="menu-text">Dissertation</span></a>
-  </li>  
-  <li class="nav-item">
     <a class="nav-link" href="./projects/project_list.html"> 
 <span class="menu-text">Projects</span></a>
   </li>  
@@ -115,15 +111,22 @@ ul.task-list li input[type="checkbox"] {
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
-        
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#skills" id="toc-skills" class="nav-link active" data-scroll-target="#skills">Skills</a></li>
+  <li><a href="#contact" id="toc-contact" class="nav-link" data-scroll-target="#contact">Contact</a></li>
+  </ul>
+</nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">About</h1>
+<h1 class="title">About Me</h1>
 </div>
 
 
@@ -140,11 +143,38 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<p>About this site</p>
+<p>I’m a 1st-class Geography BSc graduate from the University of Manchester with a specialism in GIS and spatial analysis. My dissertation — <em>Please Marten the Gap</em> — developed a Python-based spatial prioritisation framework for red squirrel conservation, combining species interaction modelling with multi-criteria decision analysis to guide reserve selection under pine marten recolonisation scenarios in Cumbria.</p>
+<p>I’m looking for opportunities in GIS-informed consultation or technical roles. My interests span planning, landscape ecology and biodiversity net gain (BNG), and sustainable development. Opportunities aligned with these goals are always welcome.</p>
+<hr>
+<section id="skills" class="level2">
+<h2 class="anchored" data-anchor-id="skills">Skills</h2>
+<ul>
+<li><strong>Geospatial programming:</strong> Python (GeoPandas, Shapely, Rasterio, PyProj, scikit-image), spatial indexing (R-trees), raster and vector workflows</li>
+<li><strong>GIS platforms:</strong> ArcGIS Pro, QGIS</li>
+<li><strong>Analysis:</strong> Multi-criteria decision analysis, landscape ecology metrics, algorithm design, data visualisation (Matplotlib)</li>
+<li><strong>Other:</strong> Git, Quarto, reproducible research workflows</li>
+</ul>
+<hr>
+</section>
+<section id="contact" class="level2">
+<h2 class="anchored" data-anchor-id="contact">Contact</h2>
+<p>You can find all my code on <a href="https://github.com/MaxLarner/gis-portfolio-max-larner">GitHub</a>, connect with me on <a href="https://linkedin.com/in/max-larner-b53610208">LinkedIn</a>, or reach me by email at max.larner123@gmail.com.</p>
 
 
+</section>
 
 </main> <!-- /main -->
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+    // Ensure external links open in a new tab
+    document.querySelectorAll('a[href^="http"]').forEach(link => {
+      if (!link.href.includes(window.location.host)) {
+        link.setAttribute('target', '_blank');
+        link.setAttribute('rel', 'noopener');
+      }
+    });
+});
+</script>
 <script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const toggleBodyColorMode = (bsSheetEl) => {

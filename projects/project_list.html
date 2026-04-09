@@ -93,10 +93,6 @@ ul.task-list li input[type="checkbox"] {
 <span class="menu-text">Home</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../projects/dissertation/dissertation.html"> 
-<span class="menu-text">Dissertation</span></a>
-  </li>  
-  <li class="nav-item">
     <a class="nav-link active" href="../projects/project_list.html" aria-current="page"> 
 <span class="menu-text">Projects</span></a>
   </li>  
@@ -192,6 +188,17 @@ Tools: Python, GIS, Weighting layers
 
 
 </main> <!-- /main -->
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+    // Ensure external links open in a new tab
+    document.querySelectorAll('a[href^="http"]').forEach(link => {
+      if (!link.href.includes(window.location.host)) {
+        link.setAttribute('target', '_blank');
+        link.setAttribute('rel', 'noopener');
+      }
+    });
+});
+</script>
 <script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const toggleBodyColorMode = (bsSheetEl) => {

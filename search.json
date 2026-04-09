@@ -2,9 +2,23 @@
   {
     "objectID": "about.html",
     "href": "about.html",
-    "title": "About",
+    "title": "About Me",
     "section": "",
-    "text": "About this site"
+    "text": "I’m a 1st-class Geography BSc graduate from the University of Manchester with a specialism in GIS and spatial analysis. My dissertation — Please Marten the Gap — developed a Python-based spatial prioritisation framework for red squirrel conservation, combining species interaction modelling with multi-criteria decision analysis to guide reserve selection under pine marten recolonisation scenarios in Cumbria.\nI’m looking for opportunities in GIS-informed consultation or technical roles. My interests span planning, landscape ecology and biodiversity net gain (BNG), and sustainable development. Opportunities aligned with these goals are always welcome."
+  },
+  {
+    "objectID": "about.html#skills",
+    "href": "about.html#skills",
+    "title": "About Me",
+    "section": "Skills",
+    "text": "Skills\n\nGeospatial programming: Python (GeoPandas, Shapely, Rasterio, PyProj, scikit-image), spatial indexing (R-trees), raster and vector workflows\nGIS platforms: ArcGIS Pro, QGIS\nAnalysis: Multi-criteria decision analysis, landscape ecology metrics, algorithm design, data visualisation (Matplotlib)\nOther: Git, Quarto, reproducible research workflows"
+  },
+  {
+    "objectID": "about.html#contact",
+    "href": "about.html#contact",
+    "title": "About Me",
+    "section": "Contact",
+    "text": "Contact\nYou can find all my code on GitHub, connect with me on LinkedIn, or reach me by email at max.larner123@gmail.com."
   },
   {
     "objectID": "projects/project_list.html",
@@ -200,7 +214,7 @@
     "href": "projects/dissertation/dissertation.html#figures-and-visual-outputs",
     "title": "Please Marten the Gap: Spatial Prioritisation for Red Squirrel Conservation",
     "section": "Figures and Visual Outputs",
-    "text": "Figures and Visual Outputs\nPlaceholder images and interactive maps would be inserted here to illustrate the study area, workflow and top‑ranking strongholds. For example:\n\nFigure 3: Study area and Lake District Stronghold Complex.\n\nFigure 4: Comparison of grey squirrel density in existing strongholds under low, moderate and high pine marten suppression scenarios.\n\nFigure 5: Stronghold Analysis, investigating how prioritised habitat composition, core area and grey squirrel density changes under suppression scenarios"
+    "text": "Figures and Visual Outputs\n\nFigure 3: Comparison of grey squirrel density in existing strongholds under low, moderate and high pine marten suppression scenarios. \nFigure 4: Stronghold Analysis, investigating how prioritised habitat composition, core area and grey squirrel density changes under suppression scenarios."
   },
   {
     "objectID": "projects/dissertation/dissertation.html#resources",
@@ -219,21 +233,21 @@
   {
     "objectID": "index.html",
     "href": "index.html",
-    "title": "_",
+    "title": "Max Larner",
     "section": "",
-    "text": "A portfolio of recent GIS projects and Dissertation\n\n\nView Projects About Me"
+    "text": "Geospatial projects & conservation analysis\n\n\nA portfolio of recent GIS projects and Dissertation\n\n\nView Projects About Me"
   },
   {
     "objectID": "index.html#featured-projects",
     "href": "index.html#featured-projects",
-    "title": "_",
+    "title": "Max Larner",
     "section": "Featured Projects",
     "text": "Featured Projects\n\n\n\nDissertation Project – Spatial optimisation\n\nOptimising reserve selection under pine marten recolonisation in Cumbria.\n\nOpen\n\n\nWorld’s Shortest Border Algorithm\n\nFinding the shortest land border via spatial indexing & geodesic geometry.\n\nOpen\n\n\nSpatial Redistribution Algorithm\n\nImplementing Jonny Huck’s 2014 algorithm to redistribute ambiguous points.\n\nOpen"
   },
   {
     "objectID": "index.html#about-me",
     "href": "index.html#about-me",
-    "title": "_",
+    "title": "Max Larner",
     "section": "About Me",
     "text": "About Me\nI’m a 1st‑class Geography BSc graduate from the University of Manchester, looking for opportunities in GIS‑informed consultation, or technical roles. My interests span planning, landscape ecology/BNG, and sustainable development - opportunities aligned with these goals are always welcome.\nYou can see all my code on GitHub or reach me via LinkedIn or email at max.larner123@gmail.com."
   }
