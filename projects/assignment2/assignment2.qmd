@@ -2,7 +2,7 @@
 title: "Weighted Redistribution: Resolving Spatial Ambiguity with GIS"
 date: 2025-04-22
 categories: [python]
-image: images/redistribution_grid.jpg
+image: images/redistribution_grid.png
 image-alt: "Implementation of Jonny Huck's (2015) weighted redistribution algorithm"
 format: html
 ---
@@ -41,7 +41,7 @@ In tackling this, I explored:
 
 ## Figure 2: Spatial Redistribution Output
 
-![](images/redistribution.png){fig-alt="Redistributed tweet data using s = 0.3 and W = 25"}
+![](images/Redistribution.png){fig-alt="Redistributed tweet data using s = 0.3 and W = 25"}
 
 The standalone output map visualises how point data is diffused in proportion to the population weighting surface. It includes all key cartographic elements such as scalebar, legend, north arrow, and transparency masking.
 

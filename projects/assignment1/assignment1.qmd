@@ -2,7 +2,7 @@
 title: "World's Shortest Border Algorithm"
 date: 2025-05-22
 categories: [python]
-image: images/shortest_border.jpg
+image: images/shortest_border.png
 image-alt: "Results of shortest border excersise"
 description: "Algorithm working with Geospatial objects to find the shortest world border"
 format: html

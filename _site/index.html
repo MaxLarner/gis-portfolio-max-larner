@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>_ – Max Larner</title>
+<title>Max Larner</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -93,10 +93,6 @@ ul.task-list li input[type="checkbox"] {
 <span class="menu-text">Home</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./projects/dissertation/dissertation.html"> 
-<span class="menu-text">Dissertation</span></a>
-  </li>  
-  <li class="nav-item">
     <a class="nav-link" href="./projects/project_list.html"> 
 <span class="menu-text">Projects</span></a>
   </li>  
@@ -117,31 +113,15 @@ ul.task-list li input[type="checkbox"] {
 <!-- margin-sidebar -->
     
 <!-- main -->
-<main class="content column-page" id="quarto-document-content">
-
-<header id="title-block-header" class="quarto-title-block default">
-<div class="quarto-title">
-<h1 class="title">_</h1>
-</div>
+<main class="content column-page" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block"></header>
 
 
-
-<div class="quarto-title-meta column-page">
-
-    
-  
-    
-  </div>
-  
-
-
-</header>
 
 
 <div class="hero">
-<h1>
+<p class="hero-heading">
 Geospatial projects &amp; conservation analysis
-</h1>
+</p>
 <p>
 A portfolio of recent GIS projects and Dissertation
 </p>
@@ -186,6 +166,17 @@ Implementing Jonny&nbsp;Huck’s 2014 algorithm to redistribute ambiguous points
 </section>
 
 </main> <!-- /main -->
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+    // Ensure external links open in a new tab
+    document.querySelectorAll('a[href^="http"]').forEach(link => {
+      if (!link.href.includes(window.location.host)) {
+        link.setAttribute('target', '_blank');
+        link.setAttribute('rel', 'noopener');
+      }
+    });
+});
+</script>
 <script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const toggleBodyColorMode = (bsSheetEl) => {

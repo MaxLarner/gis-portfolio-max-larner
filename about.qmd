@@ -1,5 +1,22 @@
 ---
-title: "About"
+title: "About Me"
 ---
 
-About this site
+I'm a 1st-class Geography BSc graduate from the University of Manchester with a specialism in GIS and spatial analysis. My dissertation — *Please Marten the Gap* — developed a Python-based spatial prioritisation framework for red squirrel conservation, combining species interaction modelling with multi-criteria decision analysis to guide reserve selection under pine marten recolonisation scenarios in Cumbria.
+
+I'm looking for opportunities in GIS-informed consultation or technical roles. My interests span planning, landscape ecology and biodiversity net gain (BNG), and sustainable development. Opportunities aligned with these goals are always welcome.
+
+---
+
+## Skills
+
+- **Geospatial programming:** Python (GeoPandas, Shapely, Rasterio, PyProj, scikit-image), spatial indexing (R-trees), raster and vector workflows
+- **GIS platforms:** ArcGIS Pro, QGIS
+- **Analysis:** Multi-criteria decision analysis, landscape ecology metrics, algorithm design, data visualisation (Matplotlib)
+- **Other:** Git, Quarto, reproducible research workflows
+
+---
+
+## Contact
+
+You can find all my code on [GitHub](https://github.com/MaxLarner/gis-portfolio-max-larner), connect with me on [LinkedIn](https://linkedin.com/in/max-larner-b53610208), or reach me by email at max.larner123@gmail.com.

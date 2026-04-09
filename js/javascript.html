@@ -1,1 +1,11 @@
-<script src="js/javascript.js"></script>
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+    // Ensure external links open in a new tab
+    document.querySelectorAll('a[href^="http"]').forEach(link => {
+      if (!link.href.includes(window.location.host)) {
+        link.setAttribute('target', '_blank');
+        link.setAttribute('rel', 'noopener');
+      }
+    });
+});
+</script>

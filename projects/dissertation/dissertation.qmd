@@ -96,16 +96,11 @@ This dissertation built on fieldwork and analytical skills developed through mod
 
 ## Figures and Visual Outputs
 
-Placeholder images and interactive maps would be inserted here to illustrate the study area, workflow and top‑ranking strongholds. For example:
-
-- **Figure 3:** *Study area and Lake District Stronghold Complex.*  
-  ![](placeholder)
-
-- **Figure 4:** *Comparison of grey squirrel density in existing strongholds under low, moderate and high pine marten suppression scenarios.*  
+- **Figure 3:** *Comparison of grey squirrel density in existing strongholds under low, moderate and high pine marten suppression scenarios.*
   ![](images/Xray.png)
 
-- **Figure 5:** *Stronghold Analysis, investigating how prioritised habitat composition, core area and grey squirrel density changes under suppression scenarios*  
- ![](images/graph.png)
+- **Figure 4:** *Stronghold Analysis, investigating how prioritised habitat composition, core area and grey squirrel density changes under suppression scenarios.*
+  ![](images/graph.png)
 
 ---
 

@@ -1,5 +1,4 @@
 ---
-title: _
 format:
   html:
     toc: false
@@ -7,7 +6,7 @@ format:
 ---
 
 <div class="hero">
-  <h1>Geospatial projects & conservation analysis</h1>
+  <p class="hero-heading">Geospatial projects & conservation analysis</p>
   <p>A portfolio of recent GIS projects and Dissertation</p>
   <div class="actions">
   [View Projects](/projects/project_list.qmd){.btn}

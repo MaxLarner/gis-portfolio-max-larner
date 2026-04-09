@@ -109,6 +109,11 @@ footer a:focus-visible {
     padding: 0 1rem;
   }
   
+  /* Hide the Quarto auto-title block when it contains no title (e.g. the homepage) */
+  #title-block-header:not(:has(h1)):not(:has(h2)) {
+    display: none;
+  }
+
   /* Hero section */
   .hero {
     position: relative;
@@ -122,10 +127,12 @@ footer a:focus-visible {
     padding: 4rem 1rem;
     color: #f5f5f5;
   }
-  .hero h1 {
+  .hero .hero-heading {
     font-size: clamp(2rem, 4vw, 3rem);
     margin-bottom: 1rem;
     font-weight: 700;
+    color: #f5f5f5;
+    margin-top: 0;
   }
   .hero p {
     max-width: 600px;
@@ -223,10 +230,6 @@ footer a:focus-visible {
     margin-top: 3rem;
     padding: 2rem 0;
     color: var(--text-soft);
-    overflow: hidden;
-    display: -webkit-box;
-    -webkit-line-clamp: 3;
-    -webkit-box-orient: vertical;
     font-size: 0.875rem;
     text-align: center;
   }
@@ -239,6 +242,12 @@ footer a:focus-visible {
     backdrop-filter: saturate(180%) blur(8px);
     border-bottom: 1px solid var(--border-color);
     background-color: var(--bg-soft);
+    /* Override Bootstrap's dark-theme defaults so text is visible on a light background */
+    --bs-navbar-color: var(--text-color);
+    --bs-navbar-hover-color: #fff;
+    --bs-navbar-active-color: #fff;
+    --bs-navbar-brand-color: var(--text-color);
+    --bs-navbar-brand-hover-color: var(--text-color);
   }
   .navbar-brand {
     font-weight: 700;
@@ -247,6 +256,7 @@ footer a:focus-visible {
     margin-right: 0.5rem;
     padding: 0.5rem 0.75rem;
     border-radius: var(--radius-sm);
+    color: var(--text-color) !important;
   }
   .navbar-nav .nav-link.active,
   .navbar-nav .nav-link:focus,
@@ -258,10 +268,6 @@ footer a:focus-visible {
   /* Utility classes */
   .text-soft {
     color: var(--text-soft);
-    overflow: hidden;
-    display: -webkit-box;
-    -webkit-line-clamp: 3;
-    -webkit-box-orient: vertical;
   }
   h1.section,
   h2.section,
@@ -376,3 +382,22 @@ footer a:focus-visible {
       height: 180px;               /* consistent mobile thumb height */
     }
   }
+
+/* === Fade-in animation for project cards === */
+@keyframes cardFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(18px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.project-card {
+  animation: cardFadeIn 0.5s ease both;
+}
+.project-card:nth-child(1) { animation-delay: 0.05s; }
+.project-card:nth-child(2) { animation-delay: 0.15s; }
+.project-card:nth-child(3) { animation-delay: 0.25s; }

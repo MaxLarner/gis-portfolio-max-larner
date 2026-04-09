@@ -94,10 +94,6 @@ ul.task-list li input[type="checkbox"] {
 <span class="menu-text">Home</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../../projects/dissertation/dissertation.html"> 
-<span class="menu-text">Dissertation</span></a>
-  </li>  
-  <li class="nav-item">
     <a class="nav-link" href="../../projects/project_list.html"> 
 <span class="menu-text">Projects</span></a>
   </li>  
@@ -198,7 +194,7 @@ ul.task-list li input[type="checkbox"] {
 </section>
 <section id="figure-2-spatial-redistribution-output" class="level2">
 <h2 class="anchored" data-anchor-id="figure-2-spatial-redistribution-output">Figure 2: Spatial Redistribution Output</h2>
-<p><img src="images/redistribution.png" class="img-fluid" alt="Redistributed tweet data using s = 0.3 and W = 25"></p>
+<p><img src="images/Redistribution.png" class="img-fluid" alt="Redistributed tweet data using s = 0.3 and W = 25"></p>
 <p>The standalone output map visualises how point data is diffused in proportion to the population weighting surface. It includes all key cartographic elements such as scalebar, legend, north arrow, and transparency masking.</p>
 <hr>
 </section>
@@ -253,6 +249,17 @@ ul.task-list li input[type="checkbox"] {
 </section>
 
 </main> <!-- /main -->
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+    // Ensure external links open in a new tab
+    document.querySelectorAll('a[href^="http"]').forEach(link => {
+      if (!link.href.includes(window.location.host)) {
+        link.setAttribute('target', '_blank');
+        link.setAttribute('rel', 'noopener');
+      }
+    });
+});
+</script>
 <script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const toggleBodyColorMode = (bsSheetEl) => {
